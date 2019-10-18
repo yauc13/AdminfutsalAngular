@@ -1,0 +1,38 @@
+<div class="col-md-4 offset-md-2">
+    <div class="card">
+      <div class="card-body">
+        <form action="">
+          <div class="form-group">
+            <input type="text" name="Nombre" [(ngModel)]="championship.nameChampionship"
+             placeholder="Nombre" class="form-control" autofocus>
+          </div>
+          <div class="form-group">
+            <input type="text" name="Costo planilla" 
+             placeholder="Costo planilla" class="form-control">
+          </div>
+          <div class="form-group">
+            <input type="text" name="costo ama" [(ngModel)]="championship.costYelllowCard" placeholder="costo ama" class="form-control">
+          </div>
+          <div class="form-group">
+            <input type="text" name="costo azu" [(ngModel)]="championship.costBlueCard" placeholder="costo azu" class="form-control">
+          </div>
+          <div class="form-group">
+            <input type="text" name="costo roj" [(ngModel)]="championship.costRedCard" placeholder="costo roj" class="form-control">
+          </div>
+          <button class="btn btn-success btn-block" (click)="edit ? updateChampionship() : insertChampionship()">
+            Guardar
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+  
+  <div class="col-md-4">
+    <div class="card card-body text-center">   
+      <h3>{{championship.idChampionship}}. {{championship.nameChampionship == '' ? 'nombre campeonato' : championship.nameChampionship}}</h3>
+      <p>{{championship.costChampionship}}</p>
+      <p>{{championship.costYelllowCard}}</p>
+      <p>{{championship.costBlueCard}}</p>
+      <p>{{championship.costRedCard}}</p>
+    </div>
+  </div>

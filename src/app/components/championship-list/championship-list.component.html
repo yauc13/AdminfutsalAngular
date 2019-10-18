@@ -1,0 +1,22 @@
+<div class="col-md-4" *ngFor="let item of list">
+    <div class="card text-center">
+      <div class="card-header bg-dark text-white d-flex justify-content-between align-items-center">
+        {{item.nameChampionship}}
+        <button class="btn btn-danger" [routerLink]="['/championship/edit', item.idChampionship]">
+          <i class="far fa-trash-alt"></i>
+        </button>
+        <button class="btn btn-danger" (click)="delete(item.idChampionship)">
+          <i class="far fa-trash-alt"></i>
+        </button>
+      </div>
+      
+      <div class="card-body">
+        <p>{{item.idChampionship}}</p>
+        
+        <a [routerLink]="['/championship/admin', item.idChampionship]" class="btn btn-info btn-block">
+          View CHAMPIONSHIP
+        </a>
+      </div>
+    </div>
+  </div>
+ 
